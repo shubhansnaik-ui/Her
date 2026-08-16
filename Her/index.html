@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Arefa ♥</title>
+  <meta name="description" content="A quiet place, just for you.">
+  
+  <!-- Google Fonts: Quicksand and Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💗</text></svg>">
+</head>
+<body>
+
+  <!-- 1. Reassurance Bar -->
+  <div class="reassurance-bar" role="banner">
+    <p>I am here, I love you, and I am not leaving.</p>
+  </div>
+
+  <!-- 2. Site Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <span class="twinkle-star" aria-hidden="true">✦</span>
+      <h1>For Arefa</h1>
+      <p class="subtitle">A quiet place, just for you.</p>
+    </div>
+  </header>
+
+  <!-- 3. Open When Letters Section -->
+  <section class="section open-when-section" id="open-when">
+    <h2>Open When...</h2>
+    <div class="envelopes-container">
+      <!-- JS will render envelope cards here -->
+    </div>
+  </section>
+
+  <!-- 4. Why I Love You Jar -->
+  <section class="section jar-section" id="jar">
+    <h2>Why I Love You</h2>
+    <div class="jar-container">
+      <div class="jar">
+        <div class="jar-lid"></div>
+        <div class="jar-body">
+          <div class="jar-hearts" aria-hidden="true">
+            <span>♥</span><span>♥</span><span>♥</span>
+            <span>♥</span><span>♥</span><span>♥</span>
+            <span>♥</span><span>♥</span><span>♥</span>
+          </div>
+        </div>
+      </div>
+      <button class="jar-btn" id="jarBtn">Pull a note ♥</button>
+      <div class="jar-note-container">
+        <div class="jar-note" id="jarNote"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Reasons Section -->
+  <section class="section reasons-section" id="reasons">
+    <h2>Reasons, in no particular order</h2>
+    <div class="reasons-list" id="reasonsList">
+      <!-- JS will render accordion items here -->
+    </div>
+  </section>
+
+  <!-- 6. Memory Lane Section -->
+  <section class="section memory-section" id="memories">
+    <h2>Memory Lane</h2>
+    <p class="section-intro">Some moments I never want to forget.</p>
+    <div class="carousel-container" id="carouselContainer">
+      <button class="carousel-btn prev-btn" id="carouselPrev" aria-label="Previous photo">❮</button>
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- JS will render photo slides here -->
+        </div>
+      </div>
+      <button class="carousel-btn next-btn" id="carouselNext" aria-label="Next photo">❯</button>
+    </div>
+  </section>
+
+  <!-- 7. Footer with Secret Button -->
+  <footer class="site-footer">
+    <p>Made with all my heart, for you.</p>
+    <button class="secret-btn" id="secretBtn" aria-label="A little secret">♥ psst</button>
+  </footer>
+
+  <!-- 8. Music Player (fixed position) -->
+  <!-- Drop your song.mp3 into the /audio folder -->
+  <div class="music-player" id="musicPlayer">
+    <div class="cd-icon" id="cdIcon">💿</div>
+    <div class="equalizer" id="equalizer">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <audio id="bgMusic" loop preload="none">
+      <source src="audio/I%20Think%20They%20Call%20This%20Love%20(Cover)%20-%20Matthew%20Ifield.mp3" type="audio/mpeg">
+    </audio>
+    <button class="player-btn play-btn" id="playBtn" aria-label="Play music">▶</button>
+    <button class="player-btn volume-btn" id="volumeBtn" aria-label="Toggle volume">🔊</button>
+  </div>
+
+  <!-- 9. Lightbox (hidden by default) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged photo">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged photo">
+  </div>
+
+  <!-- 10. Secret Modal (hidden by default) -->
+  <div class="secret-modal" id="secretModal" role="dialog" aria-label="Love coupon">
+    <div class="secret-modal-overlay"></div>
+    <div class="secret-modal-card">
+      <h3>🎟️ Love Coupon</h3>
+      <p class="coupon-text" id="couponText"></p>
+      <p class="coupon-footer">No expiration. Redeemable anytime. ♥</p>
+      <button class="modal-close-btn" id="secretModalClose">I'll save this one ♥</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
